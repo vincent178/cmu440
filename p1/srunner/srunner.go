@@ -8,8 +8,8 @@ import (
 	"io/ioutil"
 	"log"
 
-	"github.com/cmu440/lsp"
-	"github.com/cmu440/lspnet"
+	"github.com/vincent178/cmu440/p1/lsp"
+	"github.com/vincent178/cmu440/p1/lspnet"
 )
 
 var (

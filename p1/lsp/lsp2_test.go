@@ -17,7 +17,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cmu440/lspnet"
+	"github.com/vincent178/cmu440/p1/lspnet"
 )
 
 type windowTestMode int
