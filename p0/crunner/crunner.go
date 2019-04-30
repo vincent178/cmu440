@@ -1,7 +1,9 @@
 package main
 
 import (
-	"fmt"
+	"io"
+	"log"
+	"net/http"
 )
 
 const (
@@ -15,5 +17,10 @@ const (
 // read and print out the server's echoed response to standard output. Whether or
 // not you add any code to this file will not affect your grade.
 func main() {
-	fmt.Println("Not implemented.")
+	helloHandler := func(w http.ResponseWriter, req *http.Request) {
+		io.WriteString(w, "Hello, world!\n")
+	}
+
+	http.HandleFunc("/hello", helloHandler)
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
